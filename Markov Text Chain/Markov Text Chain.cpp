@@ -11,7 +11,6 @@ std::string txt;
 
 void getWordGramVector(std::string);
 void getNGramVector(std::string, int);
-void swap(std::vector<Ngram> &, int, int);
 std::vector<std::string> splitWord(const char *);
 void markovIt(std::vector<Ngram>, int);
 void wordsMarkovIt(std::vector<Ngram> vec);
@@ -137,14 +136,6 @@ void getNGramVector(std::string txt, int order)
 
 	for(int x = 0; x < cin; x++)
 		markovIt(ngramVec, order);
-}
-
-//swaps vec[x] and vec[y]
-void swap(std::vector<Ngram> &vec, int x, int y)
-{
-	Ngram temp = vec[x];
-	vec[x] = vec[y];
-	vec[y] = temp;
 }
 
 //creates a vector where each element is a word.
